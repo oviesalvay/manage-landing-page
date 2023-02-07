@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
+@import "custom";
+
+p {
+    color: hsl(228, 39%, 23%);
+    margin: 2rem 0;
+    font-size: 1.1rem;
+    line-height: 2rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Be Vietam', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    background: url(./images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: 850px;
+    background-position: 155% -15%;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem clamp(1rem, 6vw, 8rem);
+
+    &__content a {
+        text-decoration: none;
+        color: hsl(288, 39%, 23%);
+        font-size: 1.1rem;
+        margin: 0 1rem;
+        font-weight: 700;
+
+        color: hsl(0, 4%, 49%);
+
+        a:hover {
+            transition: all ease .3s;
+
+        }
+    }
+
+    .ham {
+        display: none;
+    }
+}
+
+button {
+    @include get-started;
+}
+
+
+button:hover {
+    box-shadow: 1px 2px 10px hsl(12, 88%, 59%);
+    opacity: .9;
+    transition: all ease .3s;
+}
+
+.intro {
+    @include flexbox;
+    @include padding;
+    align-items: center;
+    gap: 4rem;
+
+    & div {
+        @include flex-column;
+    }
+
+    & figure {
+        @include flex-column;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    color: hwb(228 14% 68%);
+    width: 100%;
+    font-size: 1rem;
+    padding: .7rem 0;
+    // margin-left: -16%;
+}
+
+h4 {
+    font-size: 2.2rem;
+    text-align: center;
+    color: hsl(228, 39%, 23%);
+    padding: 2rem 0;
+}
+
+h5 {
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 2rem;
+    color: white;
+}
+
+.manage-difference {
+    @include padding;
+    background: url(./images/bg-tablet-pattern.svg);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8rem;
+    background-repeat: no-repeat;
+    background-position: -25% 190%;
+    background-size: 680px;
+
+    .difference {
+        // padding: 2rem 0;
+        flex-basis: 350px;
+        flex-grow: 1;
+    }
+
+    .the-difference {
+        // @include padding;
+        flex-basis: 350px;
+        flex-grow: 1;
+
+
+
+    }
+
+    .the-difference p {
+        margin: 2rem 0 2rem 5rem;
+
+    }
+
+    .track h3::before {
+        content: '01';
+        @include get-started;
+        padding: .7rem 1.5rem;
+        margin-right: .5rem;
+
+    }
+
+    .Advanced h3::before {
+        content: '02';
+        @include get-started;
+        padding: .7rem 1.5rem;
+        margin-right: .5rem;
+    }
+
+    .Everything h3::before {
+        content: '03';
+        @include get-started;
+        padding: .7rem 1.5rem;
+        margin-right: .5rem;
+    }
+}
+
+
+#said {
+    overflow-x: hidden;
+
+    .what-they-said::-webkit-scrollbar {
+        display: none;
+    }
+
+    .what-they-said {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        div {
+            margin-top: 5rem;
+            background-color: hsl(0, 0, 98%);
+            transition: all ease .3s;
+            min-width: 500px;
+            max-width: 800px;
+            padding: 0 1rem;
+            text-align: center;
+
+            p {
+                font-size: 1rem;
+            }
+
+            img {
+                width: 30%;
+                display: block;
+                margin: 0 auto;
+                margin-top: -10%;
+            }
+        }
+
+    }
+
+    .scroll-btn {
+        max-width: fit-content;
+        margin: auto;
+
+        #left,
+        #right {
+            padding: .5rem .6rem;
+            margin: 2rem 1rem;
+
+        }
+    }
+}
+
+.get-started {
+    margin: 1rem auto;
+    display: block;
+}
+
+.simplify {
+    background-color: hsl(12, 88%, 59%);
+    margin: 5rem 0 0 0;
+    height: 30vh;
+    @include padding;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url('./images/bg-simplify-section-desktop.svg');
+    background-position: -155% 100%;
+}
+
+.started {
+    background: white;
+    color: hsl(12, 88%, 59%);
+}
+
+footer {
+    background-color: hsl(233, 12%, 13%);
+    @include flexbox;
+    @include padding;
+    color: white;
+
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+.footer-content {
+    @include flexbox;
+    align-items: center;
+    color: white;
+    align-items: flex-start;
+    gap: 10rem;
+}
+
+.footer-content ul li {
+    margin: 1.5rem 0;
+    list-style: none;
+
+    li:hover {
+        color: hsl(12, 88%, 59%);
+    }
+}
+
+footer p {
+    color: white;
+}
+
+input {
+    background: mintcream;
+    color: gray;
+    border-radius: 4rem;
+    padding: 1rem 2rem;
+    border: none;
+    margin: 2rem .8rem;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn-go {
+    padding: .8rem 1.2rem;
+
+    .attribution p {
+        color: white;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    
+body {
+    font-family: 'Be Vietam', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    background: url(./images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: 3% -1%;
+    }
+
+    .nav {
+
+        &__content a {
+            color: black;
+            display: block;
+
+            &__content {
+                pointer-events: all;
+                position: absolute;
+                z-index: 1;
+                background-color: blue;
+                height: fit-content;
+                width: 80%;
+                margin: 0 auto;
+                max-width: 400px;
+                opacity: 0;
+                pointer-events: none;
+                border-radius: 3%;
+                transform: translate(-50%, 0);
+                left: 50%;
+            }
+        }
+
+        .show-nav {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .ham {
+            display: block;
+        }
+
+        .Started-button {
+            display: none;
+        }
+    }
+
+    .intro {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .manage-difference {
+        padding: 2rem 0 2rem 1rem;
+        background: url(./images/bg-tablet-pattern.svg);
+background-repeat: no-repeat;
+    background-position: 5% -5%;
+    background-size: 400px;
+
+        .difference {
+            text-align: center;
+        }
+
+        .the-difference {
+            padding: 0;
+        }
+
+        .the-difference p {
+            margin: 2rem 0;
+        }
+
+        .track,
+        .Advanced,
+        .Everything {
+            background-color: hsl(13, 100%, 96%);
+            padding: .2rem 0;
+
+        }
+    }
+    #said{
+        .what-they-said{
+         
+         div{
+            min-width: 350px;
+            max-width: 500px;
+         }
+        }
+    }
+    .simplify {
+        text-align: center;
+        flex-direction: column;
+        padding: 1.8rem 2.6rem;
+    }
+
+    footer {
+        flex-direction: column-reverse;
+        padding: 2rem 0 7rem 0;
+
+        p {
+            position: relative;
+            bottom: -25rem;
+            text-align: center;
+
+        }
+
+        .footer-content {
+            gap: 5rem;
+            padding: 0 3.5rem;
+        }
+
+        .logo {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        .social-icon {
+            margin: 2rem 0
+        }
+
+    }
+}
